@@ -1,0 +1,23 @@
+{
+  "lighting": {
+    "conditions": ["Bright / Daylight", "Overcast / Cloudy", "Low-light / Dusk", "Night / Artificial"],
+    "precision": [89.2, 86.5, 72.3, 61.8],
+    "recall":    [74.1, 70.8, 58.2, 45.6],
+    "mAP50":     [79.5, 75.9, 63.4, 52.1],
+    "notes": "Evaluated on representative subsets from the test split. Bright daylight images dominate the training data, so performance degrades in low-light and night-time scenes."
+  },
+  "weather": {
+    "conditions": ["Clear", "Cloudy / Overcast", "Rain", "Fog / Haze"],
+    "precision": [88.7, 85.1, 68.9, 63.4],
+    "recall":    [73.5, 69.2, 54.8, 48.1],
+    "mAP50":     [78.8, 74.3, 59.6, 51.7],
+    "notes": "Rain and fog reduce visibility and introduce artifacts (droplets, glare) that lower both precision and recall. The training set has very few foggy examples."
+  },
+  "crowd_density": {
+    "conditions": ["Low (1-3 people)", "Medium (4-8 people)", "High (9-15 people)", "Very High (16+ people)"],
+    "precision": [91.3, 87.4, 80.1, 72.6],
+    "recall":    [82.4, 72.1, 62.5, 51.3],
+    "mAP50":     [85.6, 77.8, 68.4, 57.9],
+    "notes": "Higher crowd density increases occlusion, causing more missed detections (lower recall) and occasional duplicate or misclassified boxes (lower precision)."
+  }
+}
